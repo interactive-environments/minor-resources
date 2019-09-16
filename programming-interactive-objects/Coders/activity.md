@@ -18,7 +18,7 @@ The class will focus on:
 
 For the workshop we are going to use a [Arduino nano 33 IOT](https://store.arduino.cc/nano-33-iot)
 **MAIN FEATURES**:
-- Arm Cortex-M0+ SAMD21 processor 
+- Arm Cortex-M0+ SAMD21 processor
 - WiFi and Bluetooth module based on ESP32
 - LSM6DS3 IMU (ACCELEROMETER + MAGNETOMETER + GYRO)
 
@@ -45,8 +45,10 @@ You can find a working code example [here](https://github.com/id-studiolab/Mqtt-
 Try the accelerometer example and explore the serial plotter
 
 ### TASK 5
-Transform movements into light
-Use the on board accelerometer to measuere and capture one movement
+Transform movements into light:
+- Use the on board accelerometer to measuere and capture a movement
+- Think about how you could transform the movement into light using the led matrix
+- You can only use white light
 
 ### TASK 6
-Can you record a moveemnt and then play it back trough light?
+Can you record a movemnt and then play it back trough light?
