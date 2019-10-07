@@ -1,54 +1,54 @@
-client = new Paho.MQTT.Client("broker.shiftr.io", Number(443), "controlpanel");
+client = new Paho.MQTT.Client( "broker.shiftr.io", Number( 443 ), "controlpanel" );
 client.onConnectionLost = onConnectionLost;
 client.onMessageArrived = onMessageArrived;
 
-var receivedMessage="";
+var receivedMessage = "";
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas( 400, 400 );
 
-  client.connect({
+  client.connect( {
     onSuccess: onConnect,
-    userName: "connected-object",
-    password: "c784e41dd3da48d4",
+    userName: "electro-forest",
+    password: "fe8708c4cd16348a",
     useSSL: true,
-  });
+  } );
 
-	textAlign(CENTER);
+  textAlign( CENTER );
 }
 
 function draw() {
-  background(220);
-	text(receivedMessage, width/2,height/2);
+  background( 220 );
+  text( receivedMessage, width / 2, height / 2 );
 }
 
-function mouseClicked(){
-	sendMessage("/minorinteractive/studio/test/1", "got a message");
+function mouseClicked() {
+  sendMessage( "/minorinteractive/studio/test/1", "got a message" );
 }
 
 function onConnect() {
   // Once a connection has been made, make a subscription and send a message.
-  console.log("connected to mosquitto");
-  client.subscribe("/minorinteractive/studio/test/1");
+  console.log( "connected to mosquitto" );
+  client.subscribe( "/minorinteractive/studio/test/1" );
 }
 
-function onConnectionLost(responseObject) {
-  if (responseObject.errorCode !== 0) {
-    console.log("onConnectionLost:" + responseObject.errorMessage);
+function onConnectionLost( responseObject ) {
+  if ( responseObject.errorCode !== 0 ) {
+    console.log( "onConnectionLost:" + responseObject.errorMessage );
   }
 }
 
-function onMessageArrived(message) {
-  console.log(message.destinationName + " -> " + message.payloadString);
+function onMessageArrived( message ) {
+  console.log( message.destinationName + " -> " + message.payloadString );
   receivedMessage = message.payloadString;
 
-	setTimeout(function(){
-		receivedMessage="";
-	},500);
+  setTimeout( function() {
+    receivedMessage = "";
+  }, 500 );
 }
 
-function sendMessage(topic, message) {
-  message = new Paho.MQTT.Message(message);
+function sendMessage( topic, message ) {
+  message = new Paho.MQTT.Message( message );
   message.destinationName = topic;
-  client.send(message);
+  client.send( message );
 }
