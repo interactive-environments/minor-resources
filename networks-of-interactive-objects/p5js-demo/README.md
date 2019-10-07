@@ -1,0 +1,15 @@
+## p5.js example sketches
+
+- [basic drawing functions](https://idstudiolab.github.io/interactive-environments/p5js-demo/00_drawing_basics/)
+- [basic typography](https://idstudiolab.github.io/interactive-environments/p5js-demo/01_typografy_basics/)
+- [working with grid](https://idstudiolab.github.io/interactive-environments/p5js-demo/02_grid/)
+- [animating a grid with perlin noise](https://idstudiolab.github.io/interactive-environments/p5js-demo/03_animated_grid/)
+- [structuring data into arrays](https://idstudiolab.github.io/interactive-environments/p5js-demo/04_arrays)
+- [play sounds](https://idstudiolab.github.io/interactive-environments/p5js-demo/05_play_sound)
+- [dealing with timed animations](https://idstudiolab.github.io/interactive-environments/p5js-demo/06_timed_animation)
+- [example of a particle system](https://idstudiolab.github.io/interactive-environments/p5js-demo/07_particle_demo)
+- [connect to mqtt](https://idstudiolab.github.io/interactive-environments/p5js-demo/08_mqtt_template)
+- [mqtt chat](https://idstudiolab.github.io/interactive-environments/p5js-demo/09_mqtt_chat)
+- [mqtt test + typography](https://idstudiolab.github.io/interactive-environments/p5js-demo/10_mqtt_test+typography)
+- [mqtt test + sound](https://idstudiolab.github.io/interactive-environments/p5js-demo/11_mqtt_test+sound)
+- [mqtt test + perlin noise grid](https://idstudiolab.github.io/interactive-environments/p5js-demo/12_mqtt_test+perlin_noise)
